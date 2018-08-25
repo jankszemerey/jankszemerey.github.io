@@ -1,6 +1,6 @@
 
 
-//elso
+/*elso
 let buttonElement = document.getElementById('btn');
 
 buttonElement.addEventListener('click', function (event) {
@@ -52,4 +52,61 @@ buttonElement6.addEventListener('click', function (event) {
     ertek = parseInt(ertek, 10);
     ertek = ertek - 1;
     $("#rating3").text(ertek);
+});*/
+
+fb.ref("posts").once('value').then(data => {
+    let savedPosts = data.val();
+    savedPosts.forEach((post, index) => {
+        let posztcim = $("<h3>").html(post.title);
+        $("#comments").append(posztcim);
+        let posztszoveg = $("<p>").html(post.text);
+        $("#comments").append(posztszoveg);
+    })
+  });
+
+//uj poszt mentése
+let buttonElement0 = document.getElementById('submit');
+
+buttonElement0.addEventListener('click', function (event) {
+    event.preventDefault();
+    
+    fb.ref("posts").once('value').then(data => {
+        let savedPosts = data.val();
+        let xyz = savedPosts.length
+        let cim = $("#field").val();
+        let szoveg = $("#description").val();
+        let path = "posts/" + xyz;
+        let dataToSave = {
+        title: cim,
+        text: szoveg,
+        };
+        fb.ref(path).set(dataToSave);
+
+            //uj poszt hozzáadása-megjelenítése
+
+
+        let posztcim = $("<h3>").html(cim);
+        $("#comments").append(posztcim);
+        let posztszoveg = $("<p>").html(szoveg);
+        $("#comments").append(posztszoveg);
+        });
 });
+
+
+
+
+
+/*
+
+//Exercise04
+
+let additionalBlock = {
+    title: "Added with javascript",
+    text: "This block was added using javascript's jQuery framework. How awesome!"
+  };
+
+let heading = $("<h1>").html(additionalBlock.title);
+$("body").append(heading);
+let paragraph = $("<p>").html(additionalBlock.text);
+$("body").append(paragraph);
+*/

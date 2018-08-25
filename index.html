@@ -15,97 +15,94 @@
                     src="imgs/star.png" class="logo">
                 <nav>
                     <ul>
-                        <li class="active"><a>Home</a></li>
-                        <li><a>Good Movies</a></li>
-                        <li><a>Better Movies</a></li>
-                        <li><a>Best Movies</a></li>
+                        <li class="active"><a href="#">Home</a></li>
+                        <li><a href="https://www.imdb.com/list/ls053420126/" target="_blank">Good Movies</a></li>
+                        <li><a href="http://better-movies.wikia.com/wiki/Better_Movies_Wiki" target="blank">Better Movies</a></li>
+                        <li><a href="https://www.rottentomatoes.com/top/bestofrt/" target="_blank">Best Movies</a></li>
                     </ul>
                 </nav>
             </div>
         </header><br>
         <main>
             <h1><strong>Welcome!</strong></h1>
-            <h2>Share your fav movie!</h2>
-        <div>
-            <fieldset>
-                <legend>
-                    <label for="movie">Movie title</label><br>
-                </legend>
-                        <input type="text" id="movie" name="user_movie">   
-            </fieldset>
-        </div><br>
-        <div>
-            <fieldset>
-                <legend>
-                    <label for="movie">Why do you like this movie?</label><br>
-                </legend>
-                <textarea id="answer" name="answer"
-                    rows="6s" cols="90" maxlength="600"
-                    wrap="hard">
-                </textarea>   
-            </fieldset>
-        </div><br>
-        <div class="elfogadom">
-            <input type="checkbox" id="color" name="color" value="color" />
-            <label for "color">I accept the tárátáttátárátáttá.</label>
-        </div><br>
-        <div>
-            <input type="button" value="Submit"> 
-        </div>
-        <div>
-            <h2>Top list</h2>
-            <ol>
-                <li class="toplist">Fight Club</li>
-                <li class="toplist">Fun with Dick and Jane</li>
-                <li class="toplist">Burn after reading</li>
-            </ol>
-        </div><br>
-        <div>
-            <h1>Latest favourite movies</h1>
-        </div>
-        <div class="post_boxes">
-            <h3>"Notting hill is the funniest and cutest of them all."</h3>
-            <h6><i>IMDb rating:   || Rotten Tomatoes rating:</i></h6> 
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor...</p>    
-            <p>Rating:</p>
-            <p id="rating">22</p>
-            <button id="btn">Upvote</button>
-            <button id="btn2">Downvote</button>           
-        </div>
-        <div class="post_boxes">
-            <h3>"There is no better movie than Tropic Thunder!!!"</h3>
-            <h6><i>IMDb rating:   || Rotten Tomatoes rating:</i></h6> 
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt...</p>    
-            <p>Rating:</p>
-            <p id="rating2">36</p>
-            <button id="btn3">Upvote</button>
-            <button id="btn4">Downvote</button>   
-        </div>
-        <div class="post_boxes">
-            <h3>"The Exorcist is the best, watch it ASAP!"</h3>
-            <h6><i>IMDb rating:   || Rotten Tomatoes rating:</i></h6> 
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et...</p>    
-            <p>Rating:</p>
-            <p id="rating3">11</p>
-            <button id="btn5">Upvote</button>
-            <button id="btn6">Downvote</button>   
-        </div><br>
-    </main>
-    <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase.js"></script>
-    <script>
+            <h2>Share your fav movie!</h2><br>
+            <div id="pagewrap">
+                <form class="frm">
+                    <div class="inpt">
+                        <h4>What is your favourite movie?</h4>
+                        <input type="text" value="" id="field" placeholder="Whiplash? Mephisto?">
+                    </div>
+                    <div class="inpt2">
+                        <h4>Why do you like this movie?</h4>
+                        <textarea value="" id="description" placeholder="My favourite part was when Leo..."
+                            rows="6s" cols="60" maxlength="600"
+                            wrap="hard"></textarea>
+                    </div><br>
+                    <div class="accept">
+                        <input type="checkbox" id="checkbox">
+                        <label for="checkbox">I accept the tüptürüpp.</label>
+                    </div><br>
+                    <div class="submit-button">
+                        <button type="submit" id="submit">Submit</button>
+                    </div>
+                </form>          
+            </div>
+            <div class="latest_fav">
+                <h4>Top list</h4>
+                <ol>
+                    <li class="toplist">Fight Club</li>
+                    <li class="toplist">Fun with Dick and Jane</li>
+                    <li class="toplist">Burn after reading</li>
+                </ol>
+            </div><br>
+            <div>
+                <h1>Latest favourite movies</h1>
+            </div><br>
+            <div class="post_boxes">
+                <div id="comments">
+                </div>
+            </div>
+<!--            <div class="post_boxes">
+                <h3>Notting hill is the funniest and cutest of them all.</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor...</p>    
+                <p>Rating:</p>
+                <p id="rating">22</p>
+                <button id="btn">Upvote</button>
+                <button id="btn2">Downvote</button>           
+            </div>
+            <div class="post_boxes">
+                <h3>There is no better movie than Tropic Thunder!!!</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt...</p>    
+                <p>Rating:</p>
+                <p id="rating2">36</p>
+                <button id="btn3">Upvote</button>
+                <button id="btn4">Downvote</button>  
+            </div>
+            <div class="post_boxes">
+                <h3>The Exorcist is the best, watch it ASAP!</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et...</p>    
+                <p>Rating:</p>
+                <p id="rating3">11</p>
+                <button id="btn5">Upvote</button>
+                <button id="btn6">Downvote</button>     
+            </div><br> -->
+        </main>
+
+        <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase.js"></script>
+        <script>
     // Initialize Firebase
-        var config = {
-        apiKey: "AIzaSyCbNXatDujRSbRP0w8xpI8crjHFtR12iss",
-        authDomain: "jank-summercamp.firebaseapp.com",
-        databaseURL: "https://jank-summercamp.firebaseio.com",
-        projectId: "jank-summercamp",
-        storageBucket: "jank-summercamp.appspot.com",
-        messagingSenderId: "214704165738"
-        };
-        firebase.initializeApp(config);
-        fb = firebase.database();
-    </script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="scripts.js"></script>
+            let config = {
+            apiKey: "AIzaSyCbNXatDujRSbRP0w8xpI8crjHFtR12iss",
+            authDomain: "jank-summercamp.firebaseapp.com",
+            databaseURL: "https://jank-summercamp.firebaseio.com",
+            projectId: "jank-summercamp",
+            storageBucket: "jank-summercamp.appspot.com",
+            messagingSenderId: "214704165738"
+            };
+            firebase.initializeApp(config);
+            fb = firebase.database();
+        </script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="scripts.js"></script>
     </body>
 </html>

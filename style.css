@@ -10,6 +10,21 @@ body {
 	padding: 0;
 }
 
+h2 {
+	color:#EFB746;
+}
+
+h3 {
+	color:#EFB746;	
+}
+
+.latest_fav {
+	position: absolute;
+	top: 220px;
+	right: 300px;
+}
+
+
 .container{
 	width: 80%;
 	margin: 0 auto;
@@ -112,8 +127,9 @@ li {
 	margin: 0;
 	padding: 12px 0 12px 84px;
 	list-style: none;
-    background-size: 30px;
-    color: black;
+	background-size: 30px;
+	font-weight: bold;
+    color: gray;
 }
 
 .toplist {
@@ -128,7 +144,7 @@ li {
 }
 
 .post_boxes {
-	width:400px;
+	width:450px;
 	text-align:left;
 }
 
@@ -137,4 +153,6 @@ li {
 	margin: 0 auto;
 }
 
+
+/*posztok*/
 
