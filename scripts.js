@@ -59,6 +59,8 @@ fb.ref("posts").once('value').then(data => {
     savedPosts.forEach((post, index) => {
         let posztcim = $("<h3>").html(post.title);
         $("#comments").append(posztcim);
+        let posztolo = $("<h5>").html(post.name);
+        $("#comments").append(posztolo);
         let posztszoveg = $("<p>").html(post.text);
         $("#comments").append(posztszoveg);
     })
@@ -75,10 +77,12 @@ buttonElement0.addEventListener('click', function (event) {
         let xyz = savedPosts.length
         let cim = $("#field").val();
         let szoveg = $("#description").val();
+        let felhasznaloNev = $("#userName").val();
         let path = "posts/" + xyz;
         let dataToSave = {
         title: cim,
         text: szoveg,
+        name: felhasznaloNev
         };
         fb.ref(path).set(dataToSave);
 
@@ -87,6 +91,8 @@ buttonElement0.addEventListener('click', function (event) {
 
         let posztcim = $("<h3>").html(cim);
         $("#comments").append(posztcim);
+        let posztolo = $("<h5>").html(felhasznaloNev)
+        $("comments").append(posztolo);
         let posztszoveg = $("<p>").html(szoveg);
         $("#comments").append(posztszoveg);
         });

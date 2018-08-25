@@ -10,6 +10,20 @@ body {
 	padding: 0;
 }
 
+input,textarea {
+	font-family: 'Roboto';
+}
+
+
+.h1 {
+	font-weight: bolder;
+	font-size: 60px;
+}
+
+.h1:hover{
+	color:#EFB746;
+}
+
 h2 {
 	color:#EFB746;
 }
@@ -20,7 +34,7 @@ h3 {
 
 .latest_fav {
 	position: absolute;
-	top: 220px;
+	top: 300px;
 	right: 300px;
 }
 
@@ -156,3 +170,7 @@ li {
 
 /*posztok*/
 
+
+h5 {
+	font-style: italic;
+}
