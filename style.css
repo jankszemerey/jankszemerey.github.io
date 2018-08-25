@@ -5,10 +5,13 @@ body {
     background: url("imgs/bcgd.jpg");
     background-repeat:no-repeat;
     background-position: center;
-    background-size: 1200px 1600px;
+	background-size: 1200px 1600px;
 	margin: 0;
 	padding: 0;
+
 }
+
+
 
 input,textarea {
 	font-family: 'Roboto';
@@ -43,6 +46,11 @@ h3 {
 	width: 80%;
 	margin: 0 auto;
   }
+
+  .container2{
+	width: 80%;
+	margin: 0 auto;
+  } 
 
 header {
 	background: #000000;
@@ -149,7 +157,7 @@ li {
 .toplist {
 	background-image: url("imgs/star.png");
 	background-repeat: no-repeat;
-	background-position: left center;
+	background-position: left;
 }
 
 .elfogadom {
@@ -173,4 +181,21 @@ li {
 
 h5 {
 	font-style: italic;
+}
+
+footer {
+	top:1600px; 
+	height: 60px;
+	width: 1200px;
+	margin: 0 auto;
+	background-color:black;
+}
+
+.footerszoveg {
+	size: 20px;
+	float: right;
+	padding-right: 2em;
+	padding-top: 0.5em;
+	text-transform: uppercase;
+	color: white;
 }
